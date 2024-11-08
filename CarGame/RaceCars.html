@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="./greensock.css">
+
+</head>
+
+<body id="body">
+    <div id="container">
+        <div id="blackbox">
+            <div id="whitebox">
+                <div class="draggable" id="car"><img id="cars" onClick=GetCurrentCar(this.id) onDblClick="FlipImage(this.id)"
+                        src="http://pngimg.com/uploads/aston_martin/aston_martin_PNG28.png" /></div>
+            </div>
+            <div class="draggable"><img id="car2" class="image"onClick=GetCurrentCar(this.id) onDblClick="FlipImage(this.id)"
+                    src="http://pngimg.com/uploads/lamborghini/lamborghini_PNG10703.png" /></div>
+            <div class="draggable"><img class="image" id="car3" onClick=GetCurrentCar(this.id) onDblClick="FlipImage(this.id)" src="http://pngimg.com/uploads/jeep/jeep_PNG146.png" /></div>
+
+            <div id="finish">
+                <image src="https://images.cdn4.stockunlimited.net/preview1300/circuit-finish-line_1444214.jpg" />
+            </div>
+        </div>
+    </div>
+<div id="carList" style="background-color:darkolivegreen; height:100%; width:200px"">
+    <ul style= "list-style-type: none">
+        <li id="cadillac/cadillac_PNG75.png" onclick="LoadCar(this.id)">
+           Cadillac
+        </li>
+        <li id="lamborghini/lamborghini_PNG10711.png" onclick="LoadCar(this.id)">
+            Lamborghini
+       </li>
+       <li id="bugatti/bugatti_PNG30.png" onclick="LoadCar(this.id)">
+           Bugatti
+   </li>
+    </ul>
+    
+</div>
+    <script src="./greensock.js"></script>
+</body>
+<footer>
+    <div id="racetrack"></div>
+</footer>
+
+
+
+</html>
