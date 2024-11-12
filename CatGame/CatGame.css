@@ -1,21 +1,29 @@
 #container {
   background-color: rgb(77, 4, 105);
-  background-image: url("chain.jpg");
+  background-image: url("Column.png");
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-size: contain; /* Or use 'cover' to fill the area */
   height: 700px;
   width: 80%;
   margin: auto;
   text-align: center;
   vertical-align: middle;
 }
+
 #blackbox {
-  background-color: black;
+  background-color: rgb(45, 236, 250);
   height: 500px;
   width: 60%;
   position: relative;
   display: inline-block;
 }
+
 #whitebox {
-  background-image: url("https://image.freepik.com/free-photo/abstract-neon-background-cylinder-platform-shiny-metallic-podium-with-round-glowing-frame-3d-render_48397-108.jpg");
+  background-image: url("basket.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   height: 200px;
   width: 60%;
   top: 50%;
@@ -23,26 +31,30 @@
   display: inline-block;
   object-fit: contain;
 }
+
 #car {
   background-color: transparent;
   height: 100px;
   width: 60%;
 }
+
 #finish {
   position: relative;
   left: 4000px;
-  top: -337;
+  top: -337px;
 }
+
 #racetrack {
   height: 50px;
   background-color: black;
   width: 100%;
 }
+
 html {
   margin: 0px;
   height: 100%;
   width: 100%;
-  background-image: url("https://i.pinimg.com/originals/4c/bb/05/4cbb051d0e0d6601451c7a65cc905249.jpg");
+  background-image: url("grass.png");
 }
 
 body {
@@ -50,11 +62,14 @@ body {
   min-height: 100%;
   width: 100%;
 }
+
 img {
   max-width: 100%;
   max-height: 100%;
   display: block; /* remove extra space below image */
 }
+
 footer {
   width: 100%;
 }
+
