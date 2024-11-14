@@ -1,24 +1,101 @@
+/* Center the container */
+body {
+  margin: 0;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers #container vertically */
+  background-image: url("grass.png");
+}
+
 #container {
-  background-color: rgb(77, 4, 105);
+  background-color: none;
   background-image: url("Column.png");
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent tiling */
-  background-size: contain; /* Or use 'cover' to fill the area */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 700px;
   width: 80%;
-  margin: auto;
-  text-align: center;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center; /* Centers #vortex horizontally */
+  align-items: center; /* Centers #vortex vertically */
 }
 
-#blackbox {
-  background-color: rgb(45, 236, 250);
+
+/* Vortex effect */
+#vortex {
+  background: radial-gradient(
+      circle,
+      rgba(45, 236, 250, 0.4),
+      rgba(77, 4, 105, 0.5)
+    ),
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(77, 4, 105, 0.3),
+      rgba(45, 236, 250, 0.3)
+    );
+  background-blend-mode: none;
+  background-size: 400%;
   height: 500px;
   width: 60%;
-  position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  opacity: 1;
 }
 
+.animate-vortex {
+  animation: vortex 3s linear 1, blurEffect 3s ease-out 1 forwards; /* Apply blur effect to vortex */
+  animation-fill-mode: forwards;
+}
+
+/* Blur effect for vortex */
+@keyframes blurEffect {
+  0% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(10px); /* Increase blur during spin */
+  }
+  100% {
+    filter: blur(0%); /* Max blur at the end of spin */
+  }
+}
+
+/* Vortex animation */
+@keyframes vortex {
+  0% {
+    background-position: 0% 0%;
+    transform: rotate(0deg);
+  }
+  100% {
+    background-position: 100% 100%;
+    transform: rotate(360deg);
+  }
+}
+
+
+.image{
+opacity:1;
+}
+/* Footer */
+footer {
+  width: 100%;
+}
+
+
+/* General styles for the cats (draggable elements) */
+.draggable {
+  max-height: 100px;
+  margin: 10px;
+  display: inline-block;
+  opacity: 1; /* Ensure cats are fully opaque */
+  filter: blur(0px); /* Start unblurred */
+  transition: filter 0.5s ease-out; /* Smooth transition */
+}
+
+/* Whitebox */
 #whitebox {
   background-image: url("basket.png");
   background-position: center;
@@ -32,44 +109,6 @@
   object-fit: contain;
 }
 
-#car {
-  background-color: transparent;
-  height: 100px;
-  width: 60%;
-}
 
-#finish {
-  position: relative;
-  left: 4000px;
-  top: -337px;
-}
 
-#racetrack {
-  height: 50px;
-  background-color: black;
-  width: 100%;
-}
-
-html {
-  margin: 0px;
-  height: 100%;
-  width: 100%;
-  background-image: url("grass.png");
-}
-
-body {
-  margin: 0px;
-  min-height: 100%;
-  width: 100%;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block; /* remove extra space below image */
-}
-
-footer {
-  width: 100%;
-}
 

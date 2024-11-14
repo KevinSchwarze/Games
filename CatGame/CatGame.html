@@ -6,26 +6,50 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="./catgame.css">
+    <style>
+        /* Center button horizontally and place it at the bottom */
+        #startButton {
+            width: 840px; /* Adjust to match the image dimensions */
+            height: 300px; /* Adjust to match the image dimensions */
+            background-image: url("button.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent; /* Ensure background is transparent */
+            border: none;
+            cursor: pointer;
+            outline: none;
+            position: fixed;
+            bottom: 20px; /* Distance from the bottom of the screen */
+            left: 50%;
+            transform: translateX(-50%); /* Center the button horizontally */
+        }
+
+        #startButton:active {
+            transform: translateX(-50%) scale(0.95); /* Small press effect */
+        }
+    </style>
 </head>
 
 <body id="body">
+    <audio id="whirlSound" src="whirl.mp3"></audio>
     <div id="container">
-        <div id="blackbox">
-            <div id="whitebox">
-                <div class="draggable" id="car"><img src="OrangeTabby.png" /></div>
-            </div>
-            <div class="draggable"><img class="image" onclick="FlipImage(this.id)" src="MaineCoon.png" /></div>
+        <div id="vortex">
+            <div id="whitebox"></div>
+            
+            <div class="draggable"><img class="image" src="OrangeTabby.png" /></div>
+            <div class="draggable"><img class="image" src="MaineCoon.png" /></div>
             <div class="draggable"><img class="image" src="ScottishFold.png" /></div>
-            <div id="finish">
-                <img src="https://images.cdn4.stockunlimited.net/preview1300/circuit-finish-line_1444214.jpg" />
-            </div>
+            <div class="draggable"><img class="image" src="NorwegianForest.png" /></div>
+            <div class="draggable"><img class="image" src="Tabby.png" /></div>
+            <div class="draggable"><img class="image" src="Ragdoll.png" /></div>
+
         </div>
     </div>
 
     <script src="./catgame.js"></script>
+
+    <button id="startButton"></button>
 </body>
-<footer>
-    <div id="grass"></div>
-</footer>
 
 </html>
