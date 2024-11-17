@@ -1,6 +1,6 @@
 #container {
   background-color: rgb(77, 4, 105);
-  background-image: url("chain.jpg");
+  background-image: url("carstore.jpg");
   height: 700px;
   width: 80%;
   margin: auto;
@@ -49,13 +49,14 @@ html {
   margin: 0px;
   height: 100%;
   width: 100%;
-  background-image: url("https://i.pinimg.com/originals/4c/bb/05/4cbb051d0e0d6601451c7a65cc905249.jpg");
+  background-image: url("Street.png");
 }
 
 body {
   margin: 0px;
   min-height: 100%;
   width: 100%;
+  
 }
 img {
   max-width: 100%;
