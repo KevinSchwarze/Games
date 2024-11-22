@@ -15,7 +15,7 @@
   display: inline-block;
 }
 #whitebox {
-  background-image: url("https://image.freepik.com/free-photo/abstract-neon-background-cylinder-platform-shiny-metallic-podium-with-round-glowing-frame-3d-render_48397-108.jpg");
+  background-image: url("iimg/BackGround.jpg");
   height: 200px;
   width: 60%;
   top: 50%;
@@ -23,7 +23,7 @@
   display: inline-block;
   object-fit: contain;
 }
-#car {
+#character {
   background-color: transparent;
   height: 100px;
   width: 60%;
@@ -33,7 +33,7 @@
   left: 4000px;
   top: -337;
 }
-#racetrack {
+#floor {
   height: 50px;
   background-color: black;
   width: 100%;
