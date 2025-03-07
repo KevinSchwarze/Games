@@ -39,9 +39,36 @@ $(document).ready(function() {
   }
 });
 
+$(document).ready(function () {
+  // Array to keep track of selected cats
+  const selectedCats = [];
 
+  // Function to create a draggable cat element
+  function createCatElement(imageSrc) {
+    const catDiv = $('<div class="draggable"><img class="image" src="' + imageSrc + '" /></div>');
+    $("#vortex").append(catDiv);
+    catDiv.draggable(); // Make the new element draggable
+  }
 
+  // Initially hide all draggable cat elements
+  $(".draggable").hide();
 
+  // Handle thumbnail click events
+  $(".thumbnail").click(function () {
+    const imageSrc = $(this).find("img").attr("src");
 
+    // Check if the cat is already selected
+    if (selectedCats.includes(imageSrc)) {
+      alert("You already selected this cat!");
+      return;
+    }
 
-
+    // Add the cat if less than 4 are selected
+    if (selectedCats.length < 4) {
+      selectedCats.push(imageSrc);
+      createCatElement(imageSrc);
+    } else {
+      alert("You can only select up to 4 cats!");
+    }
+  });
+});
